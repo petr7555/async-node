@@ -1,0 +1,1 @@
+- Promises (i.e. microtasks) are executed before tasks created by setTimeout, setInterval.
