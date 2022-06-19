@@ -1,3 +1,13 @@
-const {workerData, parentPort} = require('worker_threads');
+const { workerData, parentPort } = require('worker_threads');
 
-parentPort.postMessage({message: workerData})
+const { a, b } = workerData;
+const result = a + b;
+
+// a)
+// throw new Error('bad stuff');
+
+// b)
+// process.exit(123);
+
+// c)
+parentPort.postMessage({ message: result });
